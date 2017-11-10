@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.kondratkov.bookingofmeetingrooms.view.reservation.ReservationRoom"
+    tools:showIn="@layout/activity_reservation_room"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp">
+
+
+    <TextView
+        android:id="@+id/textView36"
+        android:layout_width="131dp"
+        android:layout_height="0dp"
+        android:padding="5dp"
+        android:text="@string/number_chair"
+        tools:layout_constraintTop_creator="1"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/textView39"
+        android:layout_width="131dp"
+        android:layout_height="0dp"
+        android:padding="5dp"
+        android:text="@string/projector"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_reservation_projector"
+        app:layout_constraintLeft_toLeftOf="@+id/textView36"
+        app:layout_constraintRight_toRightOf="@+id/textView36"
+        tools:layout_constraintBaseline_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintHorizontal_bias="1.0"/>
+
+    <TextView
+        android:id="@+id/textView37"
+        android:layout_width="131dp"
+        android:layout_height="0dp"
+        android:padding="5dp"
+        android:text="@string/blackboard"
+        app:layout_constraintLeft_toLeftOf="@+id/textView39"
+        app:layout_constraintRight_toRightOf="@+id/textView39"
+        app:layout_constraintTop_toBottomOf="@+id/textView39"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1"
+        android:layout_marginTop="8dp"
+        app:layout_constraintHorizontal_bias="1.0"/>
+
+    <TextView
+        android:id="@+id/textView40"
+        android:layout_width="131dp"
+        android:layout_height="0dp"
+        android:padding="5dp"
+        android:text="@string/room_info"
+        app:layout_constraintLeft_toLeftOf="@+id/textView37"
+        app:layout_constraintRight_toRightOf="@+id/textView37"
+        app:layout_constraintTop_toBottomOf="@+id/textView37"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1"
+        android:layout_marginTop="8dp"
+        app:layout_constraintHorizontal_bias="1.0"/>
+
+
+    <TextView
+        android:id="@+id/tv_reservation_chair"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:elevation="1dp"
+        android:padding="5dp"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="@+id/tv_reservation_projector"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView36"
+        tools:layout_constraintBaseline_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_reservation_projector"/>
+
+    <TextView
+        android:id="@+id/tv_reservation_projector"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:elevation="1dp"
+        android:padding="5dp"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        android:layout_marginStart="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_reservation_chair"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toRightOf="@+id/textView39"
+        app:layout_constraintHorizontal_bias="1.0"/>
+
+    <TextView
+        android:id="@+id/tv_reservation_blackboard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:elevation="1dp"
+        android:padding="5dp"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="@+id/tv_reservation_projector"
+        app:layout_constraintTop_toBottomOf="@+id/tv_reservation_projector"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_reservation_projector"
+        android:layout_marginTop="8dp"
+        app:layout_constraintHorizontal_bias="0.0"/>
+
+    <TextView
+        android:id="@+id/tv_reservation_info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:elevation="1dp"
+        android:padding="5dp"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="@+id/tv_reservation_blackboard"
+        app:layout_constraintTop_toBottomOf="@+id/tv_reservation_blackboard"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_reservation_blackboard"
+        android:layout_marginTop="8dp"
+        app:layout_constraintHorizontal_bias="0.0"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:weightSum="1"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_reservation_info"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="60dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorButtonNormal"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/reserv_room"
+                android:textColor="@android:color/black"/>
+
+            <LinearLayout
+                android:id="@+id/linearlayout_fragment_reservation"
+                android:name="com.example.kondratkov.bookingofmeetingrooms.view.reservation.ReservationItemFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button_reservation_add"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/colorAccent"
+            android:text="@string/reserv_add"/>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
