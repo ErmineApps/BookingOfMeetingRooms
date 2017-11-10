@@ -8,13 +8,13 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
- * Created by kondratkov on 02.11.2017.
+ * Created by kondratkov on 07.11.2017.
  */
 
 public class Controller {
     static final String BASE_URL = "http://192.168.0.104";
 
-    public static ApiInterface getApi() {
+    public static ApiInterface getApi()  {
         Gson gson = new GsonBuilder()
                 .setLenient()
                 .create();

@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName;
 import java.util.ArrayList;
 
 /**
- * Created by kondratkov on 03.11.2017.
+ * Created by kondratkov on 06.11.2017.
  */
 
 public class ServicePush {

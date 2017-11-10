@@ -8,7 +8,7 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Created by kondratkov on 31.10.2017.
+ * Created by kondratkov on 06.11.2017.
  */
 @Entity(tableName = "User")
 public class User {

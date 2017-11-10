@@ -20,7 +20,7 @@ import retrofit2.http.POST;
 import retrofit2.http.Path;
 
 /**
- * Created by kondratkov on 02.11.2017.
+ * Created by kondratkov on 07.11.2017.
  */
 
 public interface ApiInterface {

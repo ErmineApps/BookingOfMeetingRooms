@@ -61,12 +61,16 @@ public class ListRoomsActivity extends AppCompatActivity{
         mRecyclerView.setLayoutManager(layoutManager);
 
         mApiInterface = Controller.getApi();
-        initializeAdapter();
+        try {
+            initializeAdapter();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         //testRequest();
 
     }
 
-    private void initializeAdapter(){
+    private void initializeAdapter() throws Exception{
         ListRoomsAdapter adapter = new ListRoomsAdapter(getApplicationContext(), mMeetingRooms);
         mRecyclerView.setAdapter(adapter);
 

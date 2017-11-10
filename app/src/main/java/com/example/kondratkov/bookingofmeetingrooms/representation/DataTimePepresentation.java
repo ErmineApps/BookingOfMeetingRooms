@@ -10,7 +10,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * Created by kondratkov on 04.11.2017.
+ * Created by kondratkov on 06.11.2017.
  */
 
 public class DataTimePepresentation {
