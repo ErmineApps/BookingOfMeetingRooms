@@ -1,5 +1,9 @@
 package kondratkov.bookingofmeetingrooms.model.api;
 
+import android.content.Context;
+import android.content.SharedPreferences;
+
+import kondratkov.bookingofmeetingrooms.MyApplication;
 import kondratkov.bookingofmeetingrooms.model.api.ApiInterface;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -13,8 +17,10 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class Controller {
     static final String BASE_URL = "http://46.164.250.180";
+    static SharedPreferences mSharedPreferences;
 
     public static ApiInterface getApi()  {
+
         Gson gson = new GsonBuilder()
                 .setLenient()
                 .create();

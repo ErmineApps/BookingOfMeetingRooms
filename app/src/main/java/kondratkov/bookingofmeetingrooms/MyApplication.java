@@ -25,6 +25,8 @@ public class MyApplication extends Application {
     private Repository mRepository;
     private Context mContext;
 
+    public static final String APP_PREFERENCES = "newAddress";
+
 
     private static MyApplication singleton;
     // Возвращает экземпляр данного класса

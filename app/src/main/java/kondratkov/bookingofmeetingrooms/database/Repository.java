@@ -15,7 +15,7 @@ public class Repository {
 
     public Repository (Context context){
         synchronized (context){
-            mAppDatabase = Room.databaseBuilder(context, AppDatabase.class, AppDatabase.DB_NAME).build();
+            mAppDatabase = Room.databaseBuilder(context, AppDatabase.class, AppDatabase.DB_NAME).fallbackToDestructiveMigration().build();;
         }
     }
 
@@ -59,4 +59,5 @@ public class Repository {
     public int getTestUser() {
         return mAppDatabase.getUserDao().getTestUser();
     }
+
 }

@@ -73,16 +73,23 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void onRequest(){
+
         mApiInterface.authentication(user).enqueue(new Callback<User>() {
             @Override
             public void onResponse(Call<User> call, Response<User> response) {
                 String s = String.valueOf(response.body());
                 if(response.code()>199 && response.code()<300 && response.body()!=null){
-                    User user = response.body();
+                    user = response.body();
+                    AsyncTask.execute(new Runnable() {
+                        @Override
+                        public void run() {
+                            MyApplication.getInstance().getRepository().addUser(user);
+                            MyApplication.getInstance().setUser(user);
+                        }
+                    });
+
                     Intent intent = new Intent(LoginActivity.this, ListRoomsActivity.class);
                     startActivity(intent);
-                    MyApplication.getInstance().getRepository().addUser(user);
-                    MyApplication.getInstance().setUser(user);
                     LoginActivity.this.finish();
                 }else{
                     Toast.makeText(LoginActivity.this, "ошибка связи!", Toast.LENGTH_SHORT).show();

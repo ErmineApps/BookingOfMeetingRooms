@@ -50,8 +50,6 @@ public class MainActivity extends AppCompatActivity{
         MyApplication.getInstance().setNavigationViewMyApp(mNavigationViewMyApp);
         MyApplication.getInstance().createdata(this);
 
-
-
         autoLogin();
         //testLogin();
     }
