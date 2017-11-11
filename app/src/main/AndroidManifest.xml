@@ -30,21 +30,25 @@
         <activity
             android:name=".view.reservation.ReservationRoom"
             android:label="@string/title_activity_reservation_room"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
             android:name=".view.reservation.ReservationAddActivity"
             android:label="@string/title_activity_reservation_add"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
             android:name=".view.bookinghistory.BookingHistory"
             android:label="@string/title_activity_booking_history"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
             android:name=".view.profile.ProfileActivity"
             android:label="@string/title_activity_profile"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
 
