@@ -7,9 +7,11 @@ import android.util.Log;
 
 public class MyIntentService extends IntentService {
 
+    PushNotification mPushNotification;
 
     public MyIntentService() {
         super("MyIntentService");
+        mPushNotification = new PushNotification(this);
     }
 
     @Override
@@ -19,8 +21,8 @@ public class MyIntentService extends IntentService {
             while (true) {
                 synchronized (this) {
                     try {
-
-                        wait(10000, 2000);
+                        mPushNotification.checkPush();
+                        wait(10000);
                     } catch (Exception e) {
                     }
                 }

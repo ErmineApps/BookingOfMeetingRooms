@@ -81,6 +81,8 @@ public class LoginActivity extends AppCompatActivity {
                     User user = response.body();
                     Intent intent = new Intent(LoginActivity.this, ListRoomsActivity.class);
                     startActivity(intent);
+                    MyApplication.getInstance().getRepository().addUser(user);
+                    MyApplication.getInstance().setUser(user);
                     LoginActivity.this.finish();
                 }else{
                     Toast.makeText(LoginActivity.this, "ошибка связи!", Toast.LENGTH_SHORT).show();

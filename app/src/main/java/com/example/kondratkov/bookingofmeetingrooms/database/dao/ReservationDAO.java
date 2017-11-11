@@ -31,6 +31,7 @@ public interface ReservationDAO {
     @Query("SELECT * FROM reservation where id = :id")
     public ReservationEntity getReservation(int id);
 
-    @Query("SELECT * FROM reservation where :date_start<date_start") //<:date_finish
-    public List<ReservationEntity> getAllReservationReminder(int date_start);//, int date_finish
+    @Query("SELECT * FROM reservation where :date_use < date_start AND date_start < :date_plus_15_min")
+    public List<ReservationEntity> getAllReservationReminder(int date_use, int date_plus_15_min);
+
 }

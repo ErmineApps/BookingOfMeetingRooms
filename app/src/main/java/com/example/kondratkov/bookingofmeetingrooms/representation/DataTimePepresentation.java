@@ -71,4 +71,11 @@ public class DataTimePepresentation {
         }
         return date;
     }
+
+    public String getData_long_HHmm(@NonNull long dateL, Context context) throws Exception{
+        Date date = new Date(dateL);
+        java.text.DateFormat mediumDateFormat = DateFormat.getMediumDateFormat(context);
+
+        return mediumDateFormat.format(date);
+    }
 }

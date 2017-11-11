@@ -15,6 +15,8 @@ public class ReservationEntity {
     private int mDateStart;
     @ColumnInfo(name = "date_finish", typeAffinity = ColumnInfo.INTEGER)
     private int mDateFinish;
+    @ColumnInfo(name = "status_reminder", typeAffinity = ColumnInfo.INTEGER)
+    private int mStatusReminder;
 
     public int getId() {
         return mId;
@@ -46,5 +48,13 @@ public class ReservationEntity {
 
     public void setDateFinish(int dateFinish) {
         mDateFinish = dateFinish;
+    }
+
+    public int getStatusReminder() {
+        return mStatusReminder;
+    }
+
+    public void setStatusReminder(int statusReminder) {
+        mStatusReminder = statusReminder;
     }
 }

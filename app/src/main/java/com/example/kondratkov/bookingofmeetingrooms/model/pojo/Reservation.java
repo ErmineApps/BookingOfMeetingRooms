@@ -36,6 +36,10 @@ public class Reservation {
     @Expose
     int User_id;
 
+    @SerializedName("Status")
+    @Expose
+    Boolean Status= null;
+
     public Reservation(MeetingRoom meetingRoom, User user, String dateStart, String dateFinish) {
         mMeetingRoom = meetingRoom;
         mUser = user;
@@ -112,5 +116,13 @@ public class Reservation {
 
     public void setUser_id(int user_id) {
         User_id = user_id;
+    }
+
+    public boolean isStatus() {
+        return Status;
+    }
+
+    public void setStatus(boolean status) {
+        Status = status;
     }
 }

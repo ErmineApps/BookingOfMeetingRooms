@@ -1,20 +1,14 @@
 package com.example.kondratkov.bookingofmeetingrooms.model.api;
 
-import android.text.Editable;
-
 import com.example.kondratkov.bookingofmeetingrooms.model.pojo.MeetingRoom;
 import com.example.kondratkov.bookingofmeetingrooms.model.pojo.Reservation;
-import com.example.kondratkov.bookingofmeetingrooms.model.pojo.ServicePush;
+import com.example.kondratkov.bookingofmeetingrooms.model.pojo.Service;
 import com.example.kondratkov.bookingofmeetingrooms.model.pojo.User;
-
-import org.json.JSONObject;
 
 import java.util.List;
 
-import okhttp3.Response;
 import retrofit2.Call;
 import retrofit2.http.Body;
-import retrofit2.http.Field;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
@@ -38,8 +32,11 @@ public interface ApiInterface {
     Call<Reservation> addReservationRoom(@Body Reservation reservation);
 
     //запрос на сервер через сервис
-    @GET("/api/Service/GetService/{id_user}")
-    Call<ServicePush>getService(@Path("id_user")int idUser);
+    @GET("/api/Services/GetServicesID/{id_user}")
+    Call<List<Service>>getService(@Path("id_user")int idUser);
+
+    @GET("/api/Services/GetServicesDeleteID/{id_user}")
+    Call<List<Service>>getServicesDeleteID(@Path("id_user")int idUser);
 
     //запрос на регистрацию
     @POST("/api/Users/Registration")

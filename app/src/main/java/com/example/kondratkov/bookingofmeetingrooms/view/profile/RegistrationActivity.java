@@ -65,6 +65,7 @@ public class RegistrationActivity extends AppCompatActivity {
                         @Override
                         public void run() {
                             MyApplication.getInstance().getRepository().addUser(user);
+                            MyApplication.getInstance().setUser(user);
                             RegistrationActivity.this.finish();
                         }
                     });

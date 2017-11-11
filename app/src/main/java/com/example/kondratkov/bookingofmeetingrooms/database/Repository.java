@@ -23,11 +23,11 @@ public class Repository {
         long rec = mAppDatabase.getReservationDao().insertReservation(reservationEntity);
     }
 
-    public void updatePerson(ReservationEntity reservationEntity) {
+    public void updateReservation(ReservationEntity reservationEntity) {
         mAppDatabase.getReservationDao().updateReservation(reservationEntity);
     }
 
-    public void deletePerson(ReservationEntity reservationEntity) {
+    public void deleteReservation(ReservationEntity reservationEntity) {
         mAppDatabase.getReservationDao().deleteReservation(reservationEntity);
     }
 
@@ -38,8 +38,8 @@ public class Repository {
     public ReservationEntity getReservation(int id) {
         return mAppDatabase.getReservationDao().getReservation(id);
     }
-    public List<ReservationEntity> getAllReservationReminder(int date_start, int date_finish){
-        return mAppDatabase.getReservationDao().getAllReservationReminder(date_start);//, date_finish
+    public List<ReservationEntity> getAllReservationReminder(int date_use, int date_plus_15_min){
+        return mAppDatabase.getReservationDao().getAllReservationReminder(date_use, date_plus_15_min);//, date_finish
     }
 
     public void addUser(User user){
