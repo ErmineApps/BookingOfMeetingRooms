@@ -66,21 +66,13 @@ public class ReservationRoom extends AppCompatActivity {
         });
 
 
-//        mReservations = new ArrayList<Reservation>();
-//        for(int i= 0; i<11; i++){
-//            mReservations.add(i, new Reservation(i, new MeetingRoom(1, i+12, "name "+String.valueOf(i),true, false, true,"2", "Описание"),new User(1, "213123", "324324"), "2017-11-5 13:00:25", "2017-11-5 13:30:25") );
-//        }
-//        mReservations.add(1, new Reservation(10, new MeetingRoom(1, 42, "name "+String.valueOf(2),true, false, true,"2", "Описание"),new User(1, "213123", "324324"), "2017-11-5 8:30:25", "2017-11-5 9:30:25") );
-//        mReservations.add(2, new Reservation(11, new MeetingRoom(1, 22, "name "+String.valueOf(3),true, false, true,"2", "Описание"),new User(1, "213123", "324324"), "2017-11-5 10:30:25", "2017-11-5 11:30:25") );
-//
-//        MyApplication.getInstance().setReservations(mReservations);
-
-        //testReserv();
+        String j = String.valueOf(getIntent().getIntExtra("MeetingRoomsID", 0));
 
         mApiInterface.getReservation(getIntent().getIntExtra("MeetingRoomsID", 0)).enqueue(new Callback<List<Reservation>>() {
             @Override
             public void onResponse(Call<List<Reservation>> call, Response<List<Reservation>> response) {
 
+                String s = "dd";
                 mReservations = response.body();
                 try {
                     addTextView();
@@ -121,19 +113,25 @@ public class ReservationRoom extends AppCompatActivity {
     }
 
     private long[] getArrayStartTime(){
-        long[] arrayStartTime = new long[mReservations.size()];
-        for(int i = 0; i<mReservations.size(); i++){
-            arrayStartTime[i] = dataTimePepresentation.getStringToDate(mReservations.get(i).getDateStart()).getTime();
+        if(mReservations !=null){
+            long[] arrayStartTime = new long[mReservations.size()];
+            for(int i = 0; i<mReservations.size(); i++){
+                arrayStartTime[i] = dataTimePepresentation.getStringToDate(mReservations.get(i).getDateStart()).getTime();
+            }
+            return arrayStartTime;
         }
-        return arrayStartTime;
+        return new long[0];
     }
 
     private long[] getArrayEndTime(){
-        long[] arrayEndTime = new long[mReservations.size()];
-        for(int i = 0; i<mReservations.size(); i++){
-            arrayEndTime[i] = dataTimePepresentation.getStringToDate(mReservations.get(i).getDateFinish()).getTime();
+        if(mReservations !=null){
+            long[] arrayEndTime = new long[mReservations.size()];
+            for(int i = 0; i<mReservations.size(); i++){
+                arrayEndTime[i] = dataTimePepresentation.getStringToDate(mReservations.get(i).getDateFinish()).getTime();
+            }
+            return arrayEndTime;
         }
-        return arrayEndTime;
+        return new long[0];
     }
 
     public void testReserv(){

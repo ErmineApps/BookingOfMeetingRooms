@@ -12,11 +12,11 @@ public class Reservation {
     @Expose
     private int mId;
 
-    @SerializedName("MeetingRoom")
+    @SerializedName("MeetingRooms")
     @Expose
     MeetingRoom mMeetingRoom;
 
-    @SerializedName("User")
+    @SerializedName("Users")
     @Expose
     User mUser;
 

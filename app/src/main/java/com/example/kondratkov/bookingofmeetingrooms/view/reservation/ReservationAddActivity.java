@@ -235,10 +235,6 @@ public class ReservationAddActivity extends AppCompatActivity {
                 MyApplication.getInstance().getMeetingRoom().getId(),
                 MyApplication.getInstance().getUser().getId());
 
-        Gson gson = new Gson();
-        String d = gson.toJson(reservation);
-        int dd =d.length();
-
         mApiInterface.addReservationRoom(reservation).enqueue(new Callback<Reservation>() {
             @Override
             public void onResponse(Call<Reservation> call, Response<Reservation> response) {

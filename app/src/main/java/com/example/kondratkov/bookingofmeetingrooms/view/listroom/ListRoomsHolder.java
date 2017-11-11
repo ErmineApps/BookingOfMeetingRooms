@@ -61,7 +61,7 @@ public class ListRoomsHolder extends RecyclerView.ViewHolder implements View.OnC
             }
             linearlayout_itemRoom.setBackgroundResource(R.color.colorFonCloseFree);
         }else{
-            if(mMeetingRoom.getDateReserv().length()<3){
+            if(mMeetingRoom.getDateReserv()==null){
                 tv_itemRoom_free.setText(R.string.freedom);
                 linearlayout_itemRoom.setBackgroundResource(R.color.colorFonFree);
             }else{

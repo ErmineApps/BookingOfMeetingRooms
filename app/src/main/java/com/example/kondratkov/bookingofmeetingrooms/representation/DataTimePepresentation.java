@@ -15,22 +15,26 @@ import java.util.Date;
 
 public class DataTimePepresentation {
 
-    public String getData_ddMMyyyy(@NonNull String dateString, Context context) throws Exception{
+    public String getData_ddMMyyyy(@NonNull String dateString1, Context context) throws Exception{
+
+        String dated = dateString1.substring(0,10)+" "+dateString1.substring(11,19);
 
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
 
-        Date date = dateFormat.parse(dateString);
+        Date date = dateFormat.parse(dated);
 
         java.text.DateFormat mediumDateFormat = DateFormat.getMediumDateFormat(context);
 
         return mediumDateFormat.format(date);
     }
 
-    public String getData_HHmm(@NonNull String dateString, Context context) throws Exception{
+    public String getData_HHmm(@NonNull String dateString1, Context context) throws Exception{
+
+        String dated = dateString1.substring(0,10)+" "+dateString1.substring(11,19);
 
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
 
-        Date date = dateFormat.parse(dateString);
+        Date date = dateFormat.parse(dated);
 
         java.text.DateFormat mediumDateFormat = DateFormat.getTimeFormat(context);
 
@@ -56,11 +60,12 @@ public class DataTimePepresentation {
         return dateFormat.format(date);
     }
 
-    public Date getStringToDate(@NonNull String dateString) {
+    public Date getStringToDate(@NonNull String dateString1) {
+        String dated = dateString1.substring(0,10)+" "+dateString1.substring(11,19);
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
         Date date = null;
         try {
-            date = dateFormat.parse(dateString);
+            date = dateFormat.parse(dated);
         } catch (ParseException e) {
             e.printStackTrace();
         }

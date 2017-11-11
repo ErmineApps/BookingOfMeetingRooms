@@ -12,7 +12,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 
 public class Controller {
-    static final String BASE_URL = "http://192.168.0.104";
+    static final String BASE_URL = "http://46.164.250.180";
 
     public static ApiInterface getApi()  {
         Gson gson = new GsonBuilder()

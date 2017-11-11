@@ -80,7 +80,6 @@ public class ListRoomsActivity extends AppCompatActivity{
                 String s = String.valueOf(response.body());
                 mMeetingRooms.addAll(response.body());
                 mRecyclerView.getAdapter().notifyDataSetChanged();
-                Toast.makeText(ListRoomsActivity.this, "An error occurred during networking", Toast.LENGTH_SHORT).show();
             }
             @Override
             public void onFailure(Call<List<MeetingRoom>> call, Throwable t) {

@@ -30,7 +30,7 @@ public interface ApiInterface {
     Call<List<MeetingRoom>>getMeeringRooms();
 
     //запрос списка брони
-    @GET("/api/Reservations/GetReservations/{id_room}")
+    @GET("/api/Reservations/GetReservationsForMeetingRoom/{id_room}")
     Call<List<Reservation>>getReservation(@Path("id_room")int id_room);
 
     //запрос на бронирование
