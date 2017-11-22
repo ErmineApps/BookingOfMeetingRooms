@@ -24,6 +24,7 @@ public class MyApplication extends Application {
     private NavigationViewMyApp mNavigationViewMyApp;
     private Repository mRepository;
     private Context mContext;
+    private String d;
 
     public static final String APP_PREFERENCES = "newAddress";
 
